@@ -8,6 +8,7 @@ services:
       - db
     volumes:
       - ./app/:/var/www/app
+    restart: always
   
   db:
     image: mariadb:10.6
@@ -21,7 +22,8 @@ services:
       MYSQL_DATABASE: "db_simbada"
       MYSQL_USER: "simbada"
       MYSQL_PASSWORD: "mie4yamb4ks0"
-    container_name: mysql
+    restart: always
+    
 
 volumes:
   data:
